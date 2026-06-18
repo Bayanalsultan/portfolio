@@ -1,0 +1,334 @@
+/* Fonts & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0A0A0A; /* Dark Base */
+    color: #F5F5F5; /* Neutral White paragraphs */
+    line-height: 1.8;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* Headings with Neon Pink Glow (#FF4FD8) */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #FF4FD8;
+    text-shadow: 0 0 10px rgba(255, 79, 216, 0.6), 0 0 20px rgba(255, 79, 216, 0.3);
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+/* Underline with Neon Glow Effect */
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #FF4FD8;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #FF4FD8, 0 0 15px #FF4FD8;
+}
+
+/* Header & Navbar */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Name Logo in Pink Neon Glow */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FF4FD8;
+    text-shadow: 0 0 10px rgba(255, 79, 216, 0.7);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+/* Links Hover Glow with Secondary Cyan (#00f5ff) */
+nav ul li a {
+    color: #A1A1AA; /* Muted texts */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f5ff;
+    text-shadow: 0 0 8px rgba(0, 245, 255, 0.8);
+}
+
+/* About Section */
+.about-section {
+    padding-top: 160px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #F5F5F5; /* Neutral White paragraphs */
+    line-height: 2;
+}
+
+/* Precise Highlight distributions within Bio */
+.highlight-pink {
+    color: #FF4FD8;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 79, 216, 0.5);
+}
+
+.highlight-cyan {
+    color: #00f5ff;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
+}
+
+.highlight-white {
+    color: #F5F5F5;
+    font-weight: 700;
+    border-bottom: 1px dashed #F5F5F5;
+}
+
+/* Cards Layout Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 35px;
+    border-radius: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00f5ff; /* Cyan borders on hover */
+    box-shadow: 0 5px 20px rgba(0, 245, 255, 0.15);
+}
+
+.card h3 {
+    color: #FF4FD8; /* Headings glow pink */
+    margin-bottom: 15px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 79, 216, 0.3);
+}
+
+.card-desc {
+    color: #F5F5F5; /* Neutral white paragraph text */
+    font-size: 0.98rem;
+}
+
+/* Muted secondary styles (#A1A1AA) */
+.date-text {
+    display: block;
+    color: #A1A1AA;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.sub-text {
+    color: #A1A1AA;
+    font-size: 1rem;
+}
+
+/* --- Certificate Cards & Hover Effects --- */
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.cert-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #222222;
+}
+
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .cert-img {
+    transform: scale(1.08);
+}
+
+.cert-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease;
+}
+
+.certificate-card:hover .cert-description,
+.certificate-card:active .cert-description {
+    max-height: 350px;
+    opacity: 1;
+    margin-top: 15px;
+    border-top: 1px dashed rgba(0, 245, 255, 0.3);
+    padding-top: 15px;
+}
+
+.cert-description p {
+    font-size: 0.92rem;
+    color: #F5F5F5;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Course Cards Icon Styling */
+.course-card i {
+    font-size: 2.5rem;
+    color: #FF4FD8; /* Icons pink */
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px rgba(255, 79, 216, 0.5));
+}
+
+/* Skills Items Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 25px 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    border-color: #FF4FD8;
+}
+
+.skill-item i {
+    font-size: 2.6rem;
+    color: #FF4FD8; /* Main pink icons */
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 6px rgba(255, 79, 216, 0.4));
+}
+
+/* Contact Links & Secondary Cyan Hover Effects */
+.contact-section {
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: #00f5ff; /* Cyan buttons */
+    border: 2px solid #00f5ff;
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #00f5ff;
+    color: #0A0A0A;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #151515;
+    font-size: 0.9rem;
+    color: #A1A1AA; /* Light secondary text */
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li {
+        margin: 0 12px;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
