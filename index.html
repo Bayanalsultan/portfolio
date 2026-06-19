@@ -1,89 +1,130 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bayan Alsultan | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Icon Library for Skills & Contact -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
         <nav>
             <div class="logo">Bayan Alsultan</div>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- 1. About Me Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2>About Me</h2>
             <p class="about-text">
-                I am Bayan Alsultan, a <span class="highlight-pink">Data Science</span> student specializing in <span class="highlight-pink">Artificial Intelligence</span>. 
-                I have a strong foundation in <span class="highlight-cyan">Data Analysis</span>, <span class="highlight-pink">Machine Learning</span>, 
-                <span class="highlight-cyan">Statistical Modeling</span>, <span class="highlight-cyan">Data Mining</span>, and <span class="highlight-cyan">Computer Vision</span>. 
-                Through academic projects and hands-on experience, I have developed the ability to transform data into 
-                <span class="highlight-white">Meaningful Insights</span> and build <span class="highlight-pink">Data-Driven Solutions</span> to real-world problems. 
-                I am passionate about leveraging artificial intelligence and <span class="highlight-cyan">Advanced Analytics</span> to support 
-                <span class="highlight-pink">Decision-Making</span>, optimize processes, and create innovative solutions. 
-                I continuously seek opportunities to expand my technical expertise and contribute to impactful projects in the fields of Data Science and Artificial Intelligence.
+                I am Bayan Alsultan, a <span class="highlight-pink">Data Science</span> student specializing in <span class="highlight-pink">Artificial Intelligence</span> with a strong technical foundation in <span class="highlight-cyan">Data Analysis</span>, <span class="highlight-pink">Machine Learning</span>, <span class="highlight-cyan">Statistical Modeling</span>, and <span class="highlight-cyan">Computer Vision</span>. Through rigorous academic projects and hands-on experience, I have developed a proven ability to process complex datasets, transform raw data into <span class="highlight-white">Meaningful Insights</span>, and build <span class="highlight-pink">Data-Driven Solutions</span> for real-world problems. Experienced in developing predictive models, leveraging <span class="highlight-cyan">Advanced Analytics</span> to support <span class="highlight-pink">Decision-Making</span>, and utilizing modern AI frameworks to optimize processes and create innovative technical solutions.
             </p>
         </div>
     </section>
 
+    <!-- 2. Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
             <h2>Projects</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Student Dropout Prediction System</h3>
-                    <p class="card-desc">A smart graduation project focused on predictive analytics in education, leveraging machine learning algorithms to identify students at risk of dropping out and support academic retention.</p>
+                
+                <!-- Project 1: Student Dropout (Ongoing - No GitHub Link) -->
+                <div class="card project-card-neon">
+                    <div>
+                        <div class="project-header">
+                            <h3>AI-Powered Student Dropout Prediction & Early Warning System</h3>
+                            <span class="status-badge">Ongoing</span>
+                        </div>
+                        <p class="card-desc">A smart predictive analytics platform designed to monitor student performance, identify academic retention risks, and trigger early intervention strategies using machine learning models (Logistic Regression, Random Forest, Neural Networks) and Explainable AI (SHAP & LIME).</p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">SHAP</span>
+                            <span class="tag">LIME</span>
+                            <span class="tag">Data Analytics</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Sentiment-Based Arabic Poetry Recommendation</h3>
-                    <p class="card-desc">An advanced Natural Language Processing (NLP) system that analyzes the emotional state of users and recommends contextual Arabic poetic verses that match their sentiment.</p>
+
+                <!-- Project 2: Poetry Recommendation (With Real GitHub Link) -->
+                <div class="card project-card-neon">
+                    <div>
+                        <div class="project-header">
+                            <h3>Emotion-Based Arabic Poetry Recommendation System</h3>
+                        </div>
+                        <p class="card-desc">An advanced end-to-end NLP solution that fine-tunes the AraBERT transformer model for multi-class Arabic emotion detection, achieving 82% classification accuracy to deliver personalized poetry recommendations through an interactive web application.</p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">AraBERT</span>
+                            <span class="tag">Hugging Face</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                        <div class="project-links-group">
+                            <a href="https://github.com/Bayanalsultan/Arabic-Sentiment-Recommendation-System" target="_blank" class="proj-btn github-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-   <section id="courses" class="courses-section">
+    <!-- 3. Courses & Programs Section -->
+    <section id="courses" class="courses-section">
         <div class="container">
             <h2>Courses & Programs</h2>
             <div class="grid">
                 
+                <!-- Certificate 1: Samsung (Optimized & Shortened Text) -->
                 <div class="card certificate-card">
                     <div class="cert-img-container">
                         <img src="Bayan Alsultan_page-0001.jpg" alt="Samsung AI & ML Certificate" class="cert-img">
                     </div>
-                    <h3>Samsung Artificial Intelligence & Machine Learning Program</h3>
+                    <h3>Samsung Innovation Campus</h3>
+                    <span class="date-text">December 2025</span>
                     <div class="cert-description">
-                        <p>An intensive 8-week Samsung program focused on strengthening both theoretical foundations and practical applications in Artificial Intelligence and Machine Learning. Gained hands-on experience in data preprocessing and analysis using NumPy and Pandas, and developed machine learning and deep learning models using TensorFlow and Keras. Applied Natural Language Processing techniques to real-world datasets and reinforced core concepts in mathematics and statistics for data science. The program concluded with a capstone project involving the design, development, and deployment of a production-ready AI model.</p>
+                        <p>An intensive 8-week program focused on core training in Artificial Intelligence, Machine Learning, and real-world applied projects. Built practical expertise in deploying production-ready AI frameworks, model evaluation, and advanced data-driven modeling techniques.</p>
                     </div>
                 </div>
 
+                <!-- Certificate 2: Google -->
                 <div class="card certificate-card">
                     <div class="cert-img-container">
                         <img src="Coursera FKLN86QS8EHY 2_page-0001.jpg" alt="Google Data Analytics Certificate" class="cert-img">
                     </div>
                     <h3>Google Data Analytics Professional Certificate</h3>
+                    <span class="date-text">March 2024</span>
                     <div class="cert-description">
                         <p>Earned the Google Data Analytics Professional Certificate, an intensive 8-course program designed to build strong foundations in data analytics. The program covered the full data lifecycle, including data collection, cleaning, analysis, and visualization. Developed practical experience using tools such as spreadsheets, SQL, Tableau, and R to derive insights from data and communicate findings effectively to support data-driven decision-making.</p>
                     </div>
                 </div>
 
+                <!-- Certificate 3: Apple -->
                 <div class="card certificate-card">
                     <div class="cert-img-container">
                         <img src="Bayan Abdulrahman Alsultan Foundation Nov 2023_page-0001.jpg" alt="Apple Developer Academy Certificate" class="cert-img">
                     </div>
                     <h3>Apple Developer Academy – Foundation Program</h3>
+                    <span class="date-text">November 2023</span>
                     <div class="cert-description">
                         <p>A 4-week foundational program in mobile application development, focusing on building practical skills in Swift, Xcode, and UI/UX design principles. Through hands-on mini-projects, I developed experience in coding, designing user-centered interfaces, and working effectively in collaborative team environments to deliver functional mobile applications.</p>
                     </div>
@@ -93,24 +134,68 @@
         </div>
     </section>
 
+    <!-- 4. Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
             <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-                <div class="skill-item"><i class="fa-solid fa-brain"></i><span>AI & ML</span></div>
-                <div class="skill-item"><i class="fa-solid fa-database"></i><span>Data Science</span></div>
-                <div class="skill-item"><i class="fa-solid fa-chart-simple"></i><span>Data Analysis</span></div>
-                <div class="skill-item"><i class="fa-solid fa-eye"></i><span>Computer Vision</span></div>
-                <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+            
+            <div class="skills-category-container">
+                <!-- Category 1: Languages -->
+                <div class="skills-cat-block">
+                    <h3 class="cat-title"><i class="fa-solid fa-code"></i> Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Frameworks & Libraries -->
+                <div class="skills-cat-block">
+                    <h3 class="cat-title"><i class="fa-solid fa-layer-group"></i> Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-brain"></i><span>Artificial Intelligence</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-robot"></i><span>Machine Learning</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-chart-line"></i><span>Data Science</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Tools -->
+                <div class="skills-cat-block">
+                    <h3 class="cat-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-chart-pie"></i><span>Data Analysis</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-file-excel"></i><span>Excel</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-chart-column"></i><span>Power BI</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- 5. Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-card">
+                <i class="fa-regular fa-file-pdf resume-icon"></i>
+                <h3>View or download my resume</h3>
+                <p>Get a detailed look at my academic background, technical skills, and projects.</p>
+                <div class="resume-btns">
+                    <!-- يفتح السيرة الذاتية كـ PDF في صفحة جديدة لمعاينتها -->
+                    <a href="BayanAlCV.pdf" target="_blank" class="contact-btn">View Resume</a>
+                    <!-- يقوم بتحميل السيرة الذاتية مباشرة على جهاز المستخدم -->
+                    <a href="BayanAlCV.pdf" download="Bayan_Alsultan_Resume.pdf" class="contact-btn transparent-btn">Download Resume</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 6. Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Let's Get in Touch</h2>
-            <p class="card-desc">I am always open to discussing new opportunities, data science collaborations, or innovative AI projects.</p>
             <div class="contact-links">
                 <div class="contact-info">
                     <span class="sub-text"><i class="fa-solid fa-envelope"></i> bayanalsultan24@gmail.com</span>
@@ -118,11 +203,13 @@
                 <div class="btn-group">
                     <a href="mailto:bayanalsultan24@gmail.com" class="contact-btn">Email Me</a>
                     <a href="https://www.linkedin.com/in/bayan-alsultann?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="contact-btn">LinkedIn</a>
+                    <a href="https://github.com/Bayanalsultan" target="_blank" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>All Rights Reserved &copy; 2026 | Bayan Alsultan</p>
     </footer>
