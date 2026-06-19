@@ -11,7 +11,7 @@
 
 body {
     background-color: #0A0A0A; /* Dark Base */
-    color: #F5F5F5; /* Neutral White paragraphs */
+    color: #F5F5F5; /* Neutral White base text */
     line-height: 1.8;
 }
 
@@ -27,7 +27,7 @@ h2 {
     text-align: center;
     font-size: 2.2rem;
     color: #FF4FD8;
-    text-shadow: 0 0 10px rgba(255, 79, 216, 0.6), 0 0 20px rgba(255, 79, 216, 0.3);
+    text-shadow: 0 0 8px rgba(255, 79, 216, 0.4), 0 0 15px rgba(255, 79, 216, 0.2);
     margin-bottom: 50px;
     font-weight: 700;
     text-transform: uppercase;
@@ -35,7 +35,6 @@ h2 {
     position: relative;
 }
 
-/* Underline with Neon Glow Effect */
 h2::after {
     content: '';
     display: block;
@@ -44,7 +43,7 @@ h2::after {
     background-color: #FF4FD8;
     margin: 12px auto 0;
     border-radius: 2px;
-    box-shadow: 0 0 8px #FF4FD8, 0 0 15px #FF4FD8;
+    box-shadow: 0 0 6px #FF4FD8;
 }
 
 /* Header & Navbar */
@@ -62,18 +61,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-/* Name Logo in Pink Neon Glow */
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #FF4FD8;
-    text-shadow: 0 0 10px rgba(255, 79, 216, 0.7);
+    text-shadow: 0 0 8px rgba(255, 79, 216, 0.5);
 }
 
 nav ul {
@@ -82,15 +80,14 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
-/* Links Hover Glow with Secondary Cyan (#00f5ff) */
 nav ul li a {
-    color: #A1A1AA; /* Muted texts */
+    color: #A1A1AA; 
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -105,88 +102,145 @@ nav ul li a:hover {
 }
 
 .about-text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    color: #F5F5F5; /* Neutral White paragraphs */
+    color: #F5F5F5;
     line-height: 2;
 }
 
-/* Precise Highlight distributions within Bio */
 .highlight-pink {
     color: #FF4FD8;
     font-weight: 700;
-    text-shadow: 0 0 5px rgba(255, 79, 216, 0.5);
+    text-shadow: 0 0 5px rgba(255, 79, 216, 0.4);
 }
 
 .highlight-cyan {
     color: #00f5ff;
     font-weight: 700;
-    text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
+    text-shadow: 0 0 5px rgba(0, 245, 255, 0.4);
 }
 
 .highlight-white {
     color: #F5F5F5;
     font-weight: 700;
-    border-bottom: 1px dashed #F5F5F5;
 }
 
-/* Cards Layout Grid */
+/* Projects Layout & Neon-Image Box Style Simulation */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-.card {
-    background-color: #111111;
-    border: 1px solid #222222;
-    padding: 35px;
-    border-radius: 12px;
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+.project-card-neon {
+    background-color: #121212 !important; 
+    border: 1px solid #1f1f1f !important;
+    padding: 35px 30px !important;
+    border-radius: 16px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s !important;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #00f5ff; /* Cyan borders on hover */
-    box-shadow: 0 5px 20px rgba(0, 245, 255, 0.15);
-}
-
-.card h3 {
-    color: #FF4FD8; /* Headings glow pink */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 15px;
-    font-size: 1.35rem;
+}
+
+.project-card-neon h3 {
+    font-size: 1.35rem !important;
+    color: #F5F5F5 !important;
     font-weight: 700;
-    text-shadow: 0 0 5px rgba(255, 79, 216, 0.3);
+    line-height: 1.4;
 }
 
-.card-desc {
-    color: #F5F5F5; /* Neutral white paragraph text */
-    font-size: 0.98rem;
+/* Ongoing Badge Style */
+.status-badge {
+    background-color: rgba(255, 79, 216, 0.15);
+    color: #FF4FD8;
+    border: 1px solid #FF4FD8;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(255, 79, 216, 0.2);
 }
 
-/* Muted secondary styles (#A1A1AA) */
-.date-text {
-    display: block;
+.project-card-neon .card-desc {
+    color: #A1A1AA !important; 
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    background-color: #1a1a1a;
     color: #A1A1AA;
-    font-size: 0.85rem;
-    margin-bottom: 12px;
+    border: 1px solid #2a2a2a;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
-.sub-text {
-    color: #A1A1AA;
-    font-size: 1rem;
+.project-links-group {
+    display: flex;
+    gap: 12px;
 }
 
-/* --- Certificate Cards & Hover Effects --- */
+.proj-btn {
+    background-color: transparent;
+    color: #F5F5F5;
+    border: 1px solid #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.project-card-neon:hover {
+    transform: translateY(-5px) !important;
+    border-color: #00f5ff !important; 
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.1) !important;
+}
+
+.proj-btn:hover {
+    border-color: #00f5ff;
+    color: #00f5ff;
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Certificate Cards */
 .certificate-card {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 35px 30px;
+    border-radius: 12px;
 }
 
 .cert-img-container {
@@ -206,7 +260,7 @@ nav ul li a:hover {
 }
 
 .certificate-card:hover .cert-img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .cert-description {
@@ -216,8 +270,7 @@ nav ul li a:hover {
     transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease;
 }
 
-.certificate-card:hover .cert-description,
-.certificate-card:active .cert-description {
+.certificate-card:hover .cert-description {
     max-height: 350px;
     opacity: 1;
     margin-top: 15px;
@@ -229,21 +282,46 @@ nav ul li a:hover {
     font-size: 0.92rem;
     color: #F5F5F5;
     line-height: 1.6;
-    text-align: justify;
 }
 
-/* Course Cards Icon Styling */
-.course-card i {
-    font-size: 2.5rem;
-    color: #FF4FD8; /* Icons pink */
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 8px rgba(255, 79, 216, 0.5));
+.date-text {
+    display: block;
+    color: #A1A1AA;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 600;
 }
 
-/* Skills Items Grid */
+/* Skills Categorized System */
+.skills-category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skills-cat-block {
+    background-color: rgba(17, 17, 17, 0.5);
+    border: 1px solid #1a1a1a;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.cat-title {
+    color: #00f5ff; 
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cat-title i {
+    margin-right: 8px;
+    color: #FF4FD8;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
     text-align: center;
 }
@@ -266,10 +344,49 @@ nav ul li a:hover {
 }
 
 .skill-item i {
-    font-size: 2.6rem;
-    color: #FF4FD8; /* Main pink icons */
+    font-size: 2.4rem;
+    color: #FF4FD8; 
     margin-bottom: 12px;
-    filter: drop-shadow(0 0 6px rgba(255, 79, 216, 0.4));
+    filter: drop-shadow(0 0 5px rgba(255, 79, 216, 0.3));
+}
+
+/* Resume Section Design */
+.resume-section {
+    text-align: center;
+}
+
+.resume-card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resume-icon {
+    font-size: 3rem;
+    color: #FF4FD8;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(255, 79, 216, 0.4));
+}
+
+.resume-card h3 {
+    font-size: 1.3rem;
+    color: #F5F5F5;
+    margin-bottom: 10px;
+}
+
+.resume-card p {
+    color: #A1A1AA;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.resume-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* Contact Links & Secondary Cyan Hover Effects */
@@ -287,27 +404,42 @@ nav ul li a:hover {
 
 .btn-group {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contact-btn {
     background-color: transparent;
-    color: #00f5ff; /* Cyan buttons */
+    color: #00f5ff; 
     border: 2px solid #00f5ff;
-    padding: 12px 35px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s;
+}
+
+.transparent-btn {
+    color: #A1A1AA;
+    border-color: #333333;
+}
+
+.transparent-btn:hover {
+    border-color: #FF4FD8;
+    color: #FF4FD8 !important;
+    box-shadow: 0 0 12px rgba(255, 79, 216, 0.4) !important;
 }
 
 .contact-btn:hover {
     background-color: #00f5ff;
     color: #0A0A0A;
     transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
 }
 
 /* Footer */
@@ -316,19 +448,22 @@ footer {
     padding: 30px 0;
     border-top: 1px solid #151515;
     font-size: 0.9rem;
-    color: #A1A1AA; /* Light secondary text */
+    color: #A1A1AA; 
 }
 
+/* Responsive Scaling */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
     nav ul li {
-        margin: 0 12px;
+        margin: 0 6px;
     }
-    .btn-group {
+    .btn-group, .resume-btns {
         flex-direction: column;
-        gap: 15px;
+        width: 100%;
+        max-width: 280px;
+        gap: 12px;
     }
 }
